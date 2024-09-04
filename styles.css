@@ -1,0 +1,389 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to wrap if needed */
+    padding: 10px;
+    gap: 10px; /* Adds space between buttons */
+}
+
+.carousel-button {
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 5px; /* Provides uniform margin around buttons */
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    min-width: 150px; /* Minimum width to ensure readability */
+}
+
+.carousel-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-box {
+    padding: 20px;
+    background-color: #ffdddd;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    min-height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    display: none; /* Start all content boxes hidden */
+    animation: fadeIn 0.5s ease;
+}
+
+
+.content-box-info  li{
+    text-align: justify;
+    font-weight: 600;    
+    list-style-type: square;
+    
+ 
+ }
+
+.content-box-info {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    
+}
+
+.content-box-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.bttn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(247, 241, 241);
+    background-color: #f94d6a;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.bttn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1172px) {
+    .content-box-info {
+        flex-direction: column; /* Stack content vertically on medium screens */
+        text-align: center;
+    }
+
+    .carousel {
+        display: block;
+        overflow-x:scroll;
+        
+        scrollbar-width:none;
+        scroll-behavior:smooth;
+        white-space: nowrap;
+        /* padding: 10px 30px; */
+        padding: 20px;
+        width: auto;
+        gap: 20px;
+    }
+
+    .carousel-button {
+       
+        max-width:fit-content; /* Allow buttons to resize based on content */
+        padding: 10px 20px;
+        font-size: 0.9rem;
+
+    }
+
+    .content-box {
+        max-width:max-content; /* Slightly wider for tablets */
+        height: auto;
+
+    }
+
+
+    .content-box-info {
+        padding: 10px;
+        height:fit-content;
+        font-size: 0.9rem;
+        text-align: center;
+        gap: 0px;
+    }
+
+    .content-box-info  p{
+        text-align: justify;
+     }
+
+    .content-box-info  li{
+       text-align: justify;
+       font-weight: 600;    
+       list-style-type: square;
+       list-style-position: inside;
+    
+    }
+
+
+    .bttn {
+    
+        width: fit-content; /* Full width buttons */
+        padding: 10px;
+        font-size: 0.9rem;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: bold;
+        padding: 15px 30px;
+            margin: 0 10px;
+            border-radius: 30px;
+            cursor: pointer;       
+    }
+
+    /* .content-box {
+        width: fit-content; 
+        /* Full width content boxes 
+        padding: 10px;*/
+}
+
+@media (max-width: 768px) {
+    .content-box-info {
+        padding: auto;
+        width: fit-content;
+
+    }
+
+    .carousel {
+        display: block;
+        overflow-x:scroll;
+        
+        scrollbar-width:none;
+        scroll-behavior:smooth;
+        white-space: nowrap;
+        /* padding: 10px 30px; */
+        padding: 20px;
+        width: auto;
+        gap: 20px;
+    }
+    
+    .main-content ul{
+        display: block;
+        justify-content: center;
+
+    }
+    .carousel-button {
+        background: linear-gradient(0, #ff6b6b, #f94d6a);
+        color: white;
+        text-align: center;
+        /* min-height: fit-content; */
+        font-size: 0.9rem;
+        padding: 15px 30px;
+        margin: 5px; /* Provides uniform margin around buttons */
+        border-radius: 30px;
+        cursor:pointer;
+        /* font-size: 1rem; */
+        transition: transform 0.3s ease, box-shadow 0.2s ease;
+
+    }
+
+        .carousel-button:hover {
+            transform: scale(1.2);
+            margin: 15px;
+           font-weight: 600;
+ 
+        }
+
+        .content-box-info {
+            padding: 10px;
+            height:fit-content;
+            font-size: 0.9rem;
+            text-align: center;
+            gap: 0px;
+        }
+    
+        .content-box-info  p{
+            text-align: justify;
+         }
+    
+        .content-box-info  li{
+           text-align: justify;
+           font-weight: 600;    
+           list-style-type: square;
+           list-style-position: inside;
+        
+        }
+    
+    
+        .bttn {
+    
+            width: fit-content; /* Full width buttons */
+            padding: 10px;
+            font-size: 0.9rem;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px 30px;
+                margin: 0 10px;
+                border-radius: 30px;
+                cursor: pointer;       
+        }
+    
+        .content-box {
+            width: fit-content; /* Full width content boxes */
+            padding: 10px;
+        }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        margin: 10px;
+        /* max-height: max-content;  */
+
+       }
+
+       .content-box-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel {
+        display: block;
+        overflow-x:scroll;
+        scrollbar-width:none;
+        scroll-behavior:smooth;
+        white-space: nowrap;
+        /* padding: 10px 30px; */
+        padding: 20px;
+        width: auto;
+        gap: 20px;
+    }
+    
+    .carousel-button {
+        background: linear-gradient(0, #ff6b6b, #f94d6a);
+        color: white;
+        text-align: center;
+        /* min-height: fit-content; */
+        font-size: 0.9rem;
+        padding: 15px 30px;
+        margin: 5px; /* Provides uniform margin around buttons */
+        border-radius: 30px;
+        cursor:pointer;
+        /* font-size: 1rem; */
+        transition: transform 0.3s ease, box-shadow 0.2s ease;
+
+    }
+
+        .carousel-button:hover {
+            transform: scale(1.2);
+            margin: 15px;
+           font-weight: 600;
+ 
+        }
+        
+    .content-box-info {
+        padding: 10px;
+        height:fit-content;
+        font-size: 0.9rem;
+        text-align: center;
+        gap: 0px;
+    }
+
+    .content-box-info  p{
+        text-align: justify;
+     }
+
+    .content-box-info  li{
+
+       text-align: left;
+       font-weight: 600;    
+       list-style-type: square;
+    
+    }
+
+
+    .bttn {
+    
+        width: fit-content; /* Full width buttons */
+        padding: 10px;
+        font-size: 0.9rem;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: bold;
+        padding: 15px 30px;
+            margin: 0 10px;
+            border-radius: 30px;
+            cursor: pointer;       
+    }
+
+    .content-box {
+        width: fit-content; /* Full width content boxes */
+        padding: 10px;
+    }
+}
