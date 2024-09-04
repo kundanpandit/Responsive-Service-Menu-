@@ -1,10 +1,18 @@
 /* Base Styles */
-body {
-    font-family: Arial, sans-serif;
-    padding: 50px;
-    
+*{
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
 }
 
+body {
+    /* font-family: Arial, sans-serif; */
+    padding: 50px;
+    
+
+    
+}
 .container {
     display: flex;
     flex-direction: column;
